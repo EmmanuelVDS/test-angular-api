@@ -1,0 +1,17 @@
+<div id="m-top" class="container">
+
+  <input [(ngModel)]="inputValue" (ngModelChange)="searchInput()" placeholder="Rechercher">
+
+  <div class="row row-cols-1 row-cols-md-3 mx-auto d-flex justify-content-center mt-3">
+    <a routerLink="/users/{{user.id}}" class="col mb-4 text-center" *ngFor="let user of _usersSearch">
+      <div class="card text-center">
+        <div class="card-header bg-danger text-white text-uppercase">
+          {{user.name}}
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+

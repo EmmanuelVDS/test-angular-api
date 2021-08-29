@@ -1,0 +1,14 @@
+<div id="m-top" class="container">
+  <div *ngIf="_album">
+    <h4 class="text-uppercase text-center m-3">{{_album.title}}</h4>
+    <div class="row row-cols-1 row-cols-lg-5 row-cols-md-3 mx-auto d-flex justify-content-center">
+      <div class="col mb-4" *ngFor="let photo of _photos">
+        <div class="card">
+          <img src="{{photo.thumbnailUrl}}" class="img-thumbnail" alt="image of the album {{_album.id}}">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

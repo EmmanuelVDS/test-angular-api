@@ -1,0 +1,29 @@
+<div id="m-top" class="container" *ngIf="_user">
+
+  <div class="card text-center">
+    <div class="card-header bg-dark text-white text-uppercase">
+      {{_user.name}}
+    </div>
+    <div class="card-body text-left">
+      <p class="card-text">Adress : {{_user.address.city}}, {{_user.address.street}}, {{_user.address.suite}} | {{_user.address.zipcode}}</p>
+      <p class="card-text">E-mail : {{_user.email}}</p>
+    </div>
+    <div class="card-footer text-muted">
+      {{_user.website}}
+    </div>
+  </div>
+
+  <h3 class="text-center m-3">List of albums</h3>
+
+  <div class="row row-cols-1 row-cols-md-3 mx-auto d-flex justify-content-center mt-3">
+    <a routerLink="/albums/{{album.id}}" class="col mb-4 text-center" *ngFor="let album of _albums">
+      <div class="card text-center">
+        <div class="card-header bg-danger text-white text-uppercase">
+          {{album.title}}
+        </div>
+      </div>
+    </a>
+  </div>
+
+
+</div>

@@ -1,0 +1,15 @@
+<div id="m-top" class="container">
+
+  <input [(ngModel)]="inputValue" (ngModelChange)="searchInput()" placeholder="Rechercher">
+
+  <div class="row row-cols-1 row-cols-md-3 mx-auto d-flex justify-content-center mt-3">
+    <a routerLink="/albums/{{album.id}}" class="col mb-4 text-center" *ngFor="let album of _albumsSearch">
+      <div class="card text-center">
+        <div class="card-header bg-danger text-white text-uppercase">
+          {{album.title}}
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
